@@ -1,0 +1,7 @@
+# Dependency directory
+node_modules
+
+# To get the webpack dev server to work, I had to move index.html into the
+# public dir with the rest of the compiled scripts
+public/*
+!public/index.html
