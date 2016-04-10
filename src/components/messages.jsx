@@ -7,4 +7,6 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(MessageList);
+let Messages = connect(mapStateToProps)(MessageList);
+
+export default Messages;

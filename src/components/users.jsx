@@ -7,4 +7,6 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(UserList);
+let Users = connect(mapStateToProps)(UserList);
+
+export default Users;
