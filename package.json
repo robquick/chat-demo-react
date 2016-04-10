@@ -10,12 +10,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.6",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
     "immutable": "^3.7.6",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.1",
-    "redux": "^3.3.1"
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
   },
   "devDependencies": {
     "babel-core": "^6.6.5",

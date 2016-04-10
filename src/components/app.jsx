@@ -1,8 +1,12 @@
 import React from "react";
+import Header from "./header.jsx"
 
-let App = () => {
+let App = (props) => {
   return (
-    <div>Hello World!</div>
+    <div>
+        <Header />
+        {props.children}
+    </div>
   )
 }
 
