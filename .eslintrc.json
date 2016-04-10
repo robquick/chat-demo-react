@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
-    "strict": 0
+    "strict": 0,
+    "no-console": 0
   },
   "env": {
     "browser": true,

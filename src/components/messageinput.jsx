@@ -1,11 +1,16 @@
-import React from "react";
+import { connect } from "react-redux";
+import { sendMessage } from "../actions";
+import MessageInputForm from "./messageinputform.jsx";
 
-let MessageInput = () => {
-    return (
-        <form>
-            <input type="text" className="form-control" />
-        </form>
-    );
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSubmit: (text) => {
+            dispatch(sendMessage(text));
+        }
+    }
 };
 
+let MessageInput = connect(null, mapDispatchToProps)(MessageInputForm);
+
 export default MessageInput;
+
