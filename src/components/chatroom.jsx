@@ -3,26 +3,35 @@ import Users from "./users.jsx";
 import Messages from "./messages.jsx";
 import MessageInput from "./messageinput.jsx";
 
+const absStyles = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
+const fullHeightStyles = { height: "100%" };
+
 let ChatRoom = () => {
     return (
-      <div className="container-fluid" style={{position: "absolute", top: 50, left: 0, right: 0, bottom: 0}}>
-        <div className="row" style={{height: "100%"}}>
-            <div className="col-md-2" style={{height: "100%"}}>
+      <div className="container-fluid" style={{ ...absStyles, top: 50 }}>
+
+        <div className="row" style={fullHeightStyles}>
+
+            <div className="col-md-2" style={{ ...fullHeightStyles, borderRight: "1px solid", borderColor: "#e7e7e7"}}>
                 <Users />
             </div>
-            <div className="col-md-10" style={{height: "100%"}}>
-                <div style={{position: "absolute", bottom: 34, top: 0, right: 0, left: 0}}>
+
+            <div className="col-md-10" style={fullHeightStyles}>
+
+                <div style={{ ...absStyles, bottom: 34}}>
                     <Messages />
                 </div>
-                
-                <div style={{position: "absolute", bottom: 0, left: 0, right: 0}}>
+
+                <div style={{ ...absStyles, top: undefined }}>
                     <MessageInput />
                 </div>
+
             </div>
+
         </div>
-      </div>  
+
+      </div>
     );
 };
 
 export default ChatRoom;
-
