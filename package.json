@@ -1,5 +1,5 @@
 {
-  "name": "innovation-station-react",
+  "name": "chat-demo-react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "bootstrap": "^3.3.6",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "firebase": "^2.4.2",
     "immutable": "^3.7.6",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
