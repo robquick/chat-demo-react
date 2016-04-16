@@ -1,7 +1,7 @@
 import React from "react";
 
 let UserList = (props) => {
-    let userElems = props.users.map(u => <div>{u.name}</div>)
+    let userElems = props.users.map(u => <div>{u.get("name")}</div>)
     return (
         <div>{userElems}</div>
     );

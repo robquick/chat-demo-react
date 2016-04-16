@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
-import { loginUser } from "../actions"
+import { signInUser } from "../actions"
 import LoginForm from "./loginform.jsx";
 
 const mapDispatchToProps = dispatch => {
     return {
         onSubmit: name => {
-            dispatch(loginUser(name));
+            dispatch(signInUser(name));
         }
     }
 };

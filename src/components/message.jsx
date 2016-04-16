@@ -3,7 +3,7 @@ import React from "react";
 let Message = (props) => {
   let msg = props.message;
   return (
-      <div>{msg.name} > {msg.text}</div>
+      <div>{msg.get("userName")} > {msg.get("text")}</div>
   );  
 };
 
