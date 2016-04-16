@@ -4,6 +4,7 @@ import { Router, browserHistory } from "react-router";
 import { Provider } from "react-redux";
 import routes from "./routes";
 import store from "./store";
+import actions from "./actions";
 import boostrapCSS from "bootstrap/dist/css/bootstrap.min.css";
 
 const reactElem = (
@@ -15,3 +16,8 @@ const reactElem = (
 const domElem = document.getElementById("container");
 
 ReactDom.render(reactElem, domElem);
+
+setTimeout(() => {
+    store.dispatch(actions.startListeningForUsers());
+    store.dispatch(actions.startListeningForMessages());
+})
