@@ -1,7 +1,7 @@
 import Firebase from "firebase";
 import { browserHistory } from "react-router";
 
-let firebaseRef = Firebase("https://brownbag-hsg.firebaseio.com/");
+let firebaseRef = new Firebase("https://brownbag-hsg.firebaseio.com/");
 
 export const SEND_MESSAGE = "SEND_MESSAGE";
 export const SIGN_IN_USER = "SIGN_IN_USER";
@@ -20,10 +20,9 @@ export function sendMessage(text) {
 }
 
 export function signInUser(name) {
-    console.log(name);
     return dispatch => {
         let newUserRef = firebaseRef.child("users").push();
-        newUserRef.push({ name }).then(() => {
+        newUserRef.set({ name }).then(() => {
             dispatch({
                 type: SIGN_IN_USER,
                 user: { id: newUserRef.key(), name }
@@ -37,16 +36,10 @@ export function signInUser(name) {
 export function startListeningForUsers() {
     return dispatch => {
         let usersRef = firebaseRef.child("users");
-        usersRef.once("value", snapshot => {
-            dispatch({
-               type: INITIALIZE_USERS,
-               users: snapshot.val()
-            });
-        });
         usersRef.on("child_added", snapshot => {
             dispatch({
                 type: RECEIVED_USER,
-                user: snapshot.val()
+                user: { ...snapshot.val(), id: snapshot.key() } 
             })
         });
         usersRef.on("child_removed", snapshot => {

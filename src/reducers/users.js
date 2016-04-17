@@ -4,8 +4,9 @@ import * as types from "../actions";
 const users = (state = Immutable.List(), action) => {
     switch (action.type) {
         case types.INITIALIZE_USERS: {
-            let arr = action.users.map(u => Immutable.fromJS(u));
-            state = Immutable.List(arr);
+            const users = action.users || [];
+            const immutableUsers = users.map(u => Immutable.fromJS(u));
+            state = Immutable.List(immutableUsers);
             break;
         }
         case types.RECEIVED_USER: {
