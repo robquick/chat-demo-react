@@ -3,9 +3,11 @@ import  { List } from "immutable";
 import User from "./user.jsx";
 
 let UserList = (props) => {
-    let userElems = props.users.map(u => <User key={u.get("id")} user={u} />)
+    const userElems = props.users
+        .map(u => <User key={u.get("id")} user={u} />);
+    const styles = { height: "100%", overflow: "auto" };
     return (
-        <div>{userElems}</div>
+        <div style={styles}>{userElems}</div>
     );
 }
 

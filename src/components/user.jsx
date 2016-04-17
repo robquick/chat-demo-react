@@ -1,7 +1,7 @@
 import React from "react";
 import { Map } from "immutable";
 
-const styles = { overflow: "hidden", textOverflow: "ellipsis" };
+const styles = { overflow: "hidden", textOverflow: "ellipsis", fontSize: "x-large" };
 
 let User = (props) => {
     const userName = props.user.get("name");
