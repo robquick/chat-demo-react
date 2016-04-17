@@ -1,10 +1,12 @@
 import React from "react";
 import { Map } from "immutable";
 
+const styles = { overflow: "hidden", textOverflow: "ellipsis" };
+
 let User = (props) => {
-    const user = props.user;
+    const userName = props.user.get("name");
     return (
-        <div>{user.get("name")}</div>
+        <div style={styles} title={userName}>{userName}</div>
     );
 }
 
