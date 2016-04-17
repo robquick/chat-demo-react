@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import MessageList from "./messagelist.jsx";
+import MessageList from "../components/messagelist.jsx";
 
 const mapStateToProps = (state) => {
     return {

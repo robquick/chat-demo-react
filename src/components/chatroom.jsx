@@ -1,7 +1,7 @@
 import React from "react";
-import Users from "./users.jsx";
-import Messages from "./messages.jsx";
-import MessageInput from "./messageinput.jsx";
+import Users from "../containers/users.jsx";
+import Messages from "../containers/messages.jsx";
+import MessageInput from "../containers/messageinput.jsx";
 
 const absStyles = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
 const fullHeightStyles = { height: "100%" };

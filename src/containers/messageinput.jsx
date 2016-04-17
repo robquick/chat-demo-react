@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { sendMessage } from "../actions";
-import MessageInputForm from "./messageinputform.jsx";
+import MessageInputForm from "../components/messageinputform.jsx";
 
 const mapDispatchToProps = (dispatch) => {
     return {
