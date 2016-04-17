@@ -28,8 +28,8 @@ export function signInUser(name) {
                 type: SIGN_IN_USER,
                 user: { id: newUserRef.key(), name }
             });
+            newUserRef.onDisconnect().remove();
             browserHistory.push("/")
-            // TODO handle disconnect
         });
     }
 }
