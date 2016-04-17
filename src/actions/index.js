@@ -1,4 +1,6 @@
 import Firebase from "firebase";
+import { browserHistory } from "react-router";
+
 let firebaseRef = Firebase("https://brownbag-hsg.firebaseio.com/");
 
 export const SEND_MESSAGE = "SEND_MESSAGE";
@@ -26,6 +28,7 @@ export function signInUser(name) {
                 type: SIGN_IN_USER,
                 user: { id: newUserRef.key(), name }
             });
+            browserHistory.push("/")
             // TODO handle disconnect
         });
     }
