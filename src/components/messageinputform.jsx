@@ -13,7 +13,7 @@ let MessageInput = (props) => {
         
     return (
         <form onSubmit={handleSubmit}>
-            <input ref={e => elem = e} type="text" className="form-control" />
+            <input ref={e => { elem = e; elem.focus(); } } type="text" className="form-control" />
         </form>
     );
 };
