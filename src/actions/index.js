@@ -12,7 +12,7 @@ export const RECEIVED_MESSAGE = "RECEIVED_MESSAGE";
 
 export function sendMessage(text) {
     return (dispatch, getState) => {
-        var userName = getState().currentUser.get("name");
+        const userName = getState().currentUser.get("name");
         firebaseRef.child("messages").push({ userName, text }).then(() => {
             dispatch({ type: SEND_MESSAGE, userName, text });
         });
@@ -56,7 +56,7 @@ export function startListeningForMessages() {
         firebaseRef.child("messages").on("child_added", snapshot => {
             dispatch({
                type: RECEIVED_MESSAGE,
-               message: snapshot.val()
+               message: { ...snapshot.val(), id: snapshot.key() }
             });
         });
     }

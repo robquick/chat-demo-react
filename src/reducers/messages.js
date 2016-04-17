@@ -4,10 +4,7 @@ import * as types from "../actions";
 const messages = (state = Immutable.List(), action) => {
     switch (action.type) {
        case types.RECEIVED_MESSAGE:
-            var newMessage = Immutable.Map({
-                userName: action.userName,
-                text: action.text
-            });
+            var newMessage = Immutable.fromJS(action.message);
             state = state.push(newMessage);
             break;
     }

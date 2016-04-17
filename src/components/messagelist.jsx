@@ -15,7 +15,7 @@ class MessageList extends React.Component {
     }
      
     render() {
-        let messageElems = this.props.messages.map(m => <Message message={m} />)
+        let messageElems = this.props.messages.map(m => <Message key={m.get("id")} message={m} />)
         return (
             <div ref={e => this.div = e}>{messageElems}</div>
         );  
