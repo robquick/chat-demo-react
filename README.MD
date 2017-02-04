@@ -10,5 +10,6 @@ Requirements
 
 Getting Started
 -----
-* npm install
-* npm start
+* Run 'npm install' to install required node packaged.
+* Run 'npm start' to start the application in a webpack dev server.
+* Open http://localhost:8080/
