@@ -1,14 +1,18 @@
 {
   "name": "chat-demo-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple app used to teach myself React/Redux/Firebase",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --history-api-fallback --progress --colors --content-base public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rob Quick",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robquick/chat-demo-react.git"
+  },
   "dependencies": {
     "bootstrap": "^3.3.6",
     "css-loader": "^0.23.1",
