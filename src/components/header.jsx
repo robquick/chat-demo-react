@@ -2,18 +2,11 @@ import React from "react";
 
 let Header = () => {
     return (
-        <div
-            className="navbar navbar-default navbar-static-top"
-            style={{ marginBottom: 0 }}
-        >
-            <div className="container">
-                <div className="navbar-header">
-                    <a className="navbar-brand" href="/">
-                        Chat Demo
-                    </a>
-                </div>
-            </div>
-        </div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/">
+                Chat Demo
+            </a>
+        </nav>
     );
 };
 
