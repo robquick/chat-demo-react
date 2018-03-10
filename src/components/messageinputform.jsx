@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-let MessageInput = (props) => {
+let MessageInput = props => {
     let elem,
         handleSubmit = e => {
             e.preventDefault();
@@ -11,16 +11,23 @@ let MessageInput = (props) => {
             props.onSubmit(elem.value);
             elem.value = "";
         };
-        
+
     return (
         <form onSubmit={handleSubmit}>
-            <input ref={e => { elem = e; elem.focus(); } } type="text" className="form-control" />
+            <input
+                ref={e => {
+                    elem = e;
+                    elem.focus();
+                }}
+                type="text"
+                className="form-control"
+            />
         </form>
     );
 };
 
 MessageInput.propTypes = {
     onSubmit: PropTypes.func.isRequired
-}
+};
 
 export default MessageInput;
