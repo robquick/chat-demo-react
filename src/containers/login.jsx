@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
-import { signInUser } from "../actions"
+import { withRouter } from "react-router-dom";
+import { signInUser } from "../actions";
 import LoginForm from "../components/loginform.jsx";
 
 const mapDispatchToProps = dispatch => {
@@ -7,10 +8,9 @@ const mapDispatchToProps = dispatch => {
         onSubmit: name => {
             dispatch(signInUser(name));
         }
-    }
+    };
 };
 
-let Login = connect(null, mapDispatchToProps)(LoginForm);
+let Login = withRouter(connect(null, mapDispatchToProps)(LoginForm));
 
 export default Login;
-

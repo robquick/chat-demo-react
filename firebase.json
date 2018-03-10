@@ -1,19 +1,15 @@
 {
-  "firebase": "brownbag-hsg",
-  "public": "public",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ],
-  "rewrites": [
-    {
-      "source": "/public/main.js",
-      "destination": "/main.js"
-    },
-    {
-      "source": "**",
-      "destination": "/index.html"
-    }
-  ]
+    "firebase": "brownbag-hsg",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+        {
+            "source": "/public/main.js",
+            "destination": "/main.js"
+        },
+        {
+            "source": "**",
+            "destination": "/index.html"
+        }
+    ]
 }

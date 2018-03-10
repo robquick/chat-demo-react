@@ -1,5 +1,4 @@
 import Firebase from "firebase";
-import { browserHistory } from "react-router";
 
 let firebaseRef = new Firebase("https://brownbag-hsg.firebaseio.com/");
 
@@ -13,10 +12,13 @@ export const RECEIVED_MESSAGE = "RECEIVED_MESSAGE";
 export function sendMessage(text) {
     return (dispatch, getState) => {
         const userName = getState().currentUser.get("name");
-        firebaseRef.child("messages").push({ userName, text }).then(() => {
-            dispatch({ type: SEND_MESSAGE, userName, text });
-        });
-    }
+        firebaseRef
+            .child("messages")
+            .push({ userName, text })
+            .then(() => {
+                dispatch({ type: SEND_MESSAGE, userName, text });
+            });
+    };
 }
 
 export function signInUser(name) {
@@ -28,9 +30,8 @@ export function signInUser(name) {
                 user: { id: newUserRef.key(), name }
             });
             newUserRef.onDisconnect().remove();
-            browserHistory.push("/")
         });
-    }
+    };
 }
 
 export function startListeningForUsers() {
@@ -39,25 +40,25 @@ export function startListeningForUsers() {
         usersRef.on("child_added", snapshot => {
             dispatch({
                 type: RECEIVED_USER,
-                user: { ...snapshot.val(), id: snapshot.key() } 
-            })
+                user: { ...snapshot.val(), id: snapshot.key() }
+            });
         });
         usersRef.on("child_removed", snapshot => {
             dispatch({
-               type: REMOVE_USER,
-               id: snapshot.val().id 
+                type: REMOVE_USER,
+                id: snapshot.val().id
             });
-        })
-    }
+        });
+    };
 }
 
 export function startListeningForMessages() {
     return dispatch => {
         firebaseRef.child("messages").on("child_added", snapshot => {
             dispatch({
-               type: RECEIVED_MESSAGE,
-               message: { ...snapshot.val(), id: snapshot.key() }
+                type: RECEIVED_MESSAGE,
+                message: { ...snapshot.val(), id: snapshot.key() }
             });
         });
-    }
+    };
 }
