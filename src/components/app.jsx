@@ -4,7 +4,6 @@ import Header from "./header.jsx";
 import ChatRoom from "../components/chatroom.jsx";
 import Error from "../components/error.jsx";
 import Login from "../containers/login.jsx";
-import store from "../store";
 
 let App = props => {
     const currentUser = props.currentUser;
