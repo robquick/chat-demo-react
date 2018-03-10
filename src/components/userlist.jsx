@@ -2,11 +2,16 @@ import React from "react";
 import { List } from "immutable";
 import User from "./user.jsx";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const UserDiv = styled.div`
+    height: 100%;
+    overflow: auto;
+`;
 
 let UserList = props => {
     const userElems = props.users.map(u => <User key={u.get("id")} user={u} />);
-    const styles = { height: "100%", overflow: "auto" };
-    return <div style={styles}>{userElems}</div>;
+    return <UserDiv>{userElems}</UserDiv>;
 };
 
 UserList.propTypes = {

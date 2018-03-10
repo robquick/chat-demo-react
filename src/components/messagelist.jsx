@@ -2,6 +2,7 @@ import React from "react";
 import Message from "./message.jsx";
 import { List } from "immutable";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 class MessageList extends React.Component {
     componentWillUpdate() {
@@ -21,14 +22,17 @@ class MessageList extends React.Component {
     }
 
     render() {
-        const styles = { height: "100%", overflow: "auto" };
+        const MessagesDiv = styled.div`
+            height: 100%;
+            overflow: auto;
+        `;
         const messageElems = this.props.messages.map(m => (
             <Message key={m.get("id")} message={m} />
         ));
         return (
-            <div style={styles} ref={e => (this.div = e)}>
+            <MessagesDiv innerRef={e => (this.div = e)}>
                 {messageElems}
-            </div>
+            </MessagesDiv>
         );
     }
 }

@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-const styles = { width: "45%", paddingTop: 10 };
+const Container = styled.div`
+    width: 45% !important;
+    padding-top: 10px !important;
+`;
 
 let Error = () => {
     return (
-        <div className="container-fluid" style={styles}>
+        <Container className="container-fluid">
             <div className="jumbotron">
                 <h1>404: OH NOES!</h1>
                 <p>Are you lost?</p>
@@ -13,7 +17,7 @@ let Error = () => {
                     <Link to="/">Return Home</Link>
                 </p>
             </div>
-        </div>
+        </Container>
     );
 };
 

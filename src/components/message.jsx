@@ -1,17 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
-const msgStyles = { fontSize: "large", border: "1px solid #e7e7e7" };
-const nameStyles = { fontWeight: "bold", paddingTop: 5, paddingLeft: 10 };
-const textStyles = { paddingBottom: 5, paddingLeft: 10 };
+const MessageDiv = styled.div`
+    font-size: large;
+    border: 1px solid #e7e7e7;
+`;
+
+const UserNameDiv = styled.div`
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 10px;
+`;
+
+const TextDiv = styled.div`
+    padding-bottom: 5px;
+    padding-left: 10px;
+`;
 
 let Message = props => {
     const msg = props.message;
     return (
-        <div style={msgStyles}>
-            <div style={nameStyles}>{msg.get("userName")}</div>
-            <div style={textStyles}>{msg.get("text")}</div>
-        </div>
+        <MessageDiv>
+            <UserNameDiv>{msg.get("userName")}</UserNameDiv>
+            <TextDiv>{msg.get("text")}</TextDiv>
+        </MessageDiv>
     );
 };
 
