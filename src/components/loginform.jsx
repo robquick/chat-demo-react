@@ -18,9 +18,9 @@ let LoginForm = props => {
 
     return (
         <form
-            className="form-inline"
+            className="form-inline justify-content-center"
             onSubmit={handleSubmit}
-            style={{ textAlign: "center", paddingTop: 50 }}
+            style={{ paddingTop: 50 }}
         >
             <div className="form-group">
                 <label style={{ marginRight: 5 }}>Who are you?</label>
@@ -36,7 +36,7 @@ let LoginForm = props => {
             </div>
             <button
                 type="submit"
-                className="btn btn-default"
+                className="btn btn-outline-dark"
                 style={{ marginLeft: 5 }}
             >
                 Log In

@@ -14,7 +14,7 @@ const fullHeightStyles = { height: "100%" };
 
 let ChatRoom = () => {
     return (
-        <div className="container-fluid" style={{ ...absStyles, top: 50 }}>
+        <div className="container-fluid" style={{ ...absStyles, top: 56 }}>
             <div className="row" style={fullHeightStyles}>
                 <div
                     className="col-md-2"
