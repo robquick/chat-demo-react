@@ -1,5 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const Form = styled.form`
+    padding-top: 50px;
+`;
+
+const Label = styled.label`
+    margin-right: 5px;
+`;
+
+const Button = styled.button`
+    margin-left: 5px;
+`;
 
 let LoginForm = props => {
     let elem,
@@ -17,13 +30,12 @@ let LoginForm = props => {
         };
 
     return (
-        <form
+        <Form
             className="form-inline justify-content-center"
             onSubmit={handleSubmit}
-            style={{ paddingTop: 50 }}
         >
             <div className="form-group">
-                <label style={{ marginRight: 5 }}>Who are you?</label>
+                <Label>Who are you?</Label>
                 <input
                     ref={e => {
                         elem = e;
@@ -34,14 +46,10 @@ let LoginForm = props => {
                     placeholder="Your Name"
                 />
             </div>
-            <button
-                type="submit"
-                className="btn btn-outline-dark"
-                style={{ marginLeft: 5 }}
-            >
+            <Button type="submit" className="btn btn-outline-dark">
                 Log In
-            </button>
-        </form>
+            </Button>
+        </Form>
     );
 };
 
