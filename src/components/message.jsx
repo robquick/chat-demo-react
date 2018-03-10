@@ -18,7 +18,7 @@ const TextDiv = styled.div`
     padding-left: 10px;
 `;
 
-let Message = props => {
+const Message = props => {
     const msg = props.message;
     return (
         <MessageDiv>

@@ -9,7 +9,7 @@ const UserDiv = styled.div`
     overflow: auto;
 `;
 
-let UserList = props => {
+const UserList = props => {
     const userElems = props.users.map(u => <User key={u.get("id")} user={u} />);
     return <UserDiv>{userElems}</UserDiv>;
 };

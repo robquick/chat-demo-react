@@ -5,7 +5,7 @@ import ChatRoom from "../components/chatroom.jsx";
 import Error from "../components/error.jsx";
 import Login from "../containers/login.jsx";
 
-let App = props => {
+const App = props => {
     const currentUser = props.currentUser;
     const renderLoginIfNeeded = props =>
         !currentUser ? <Login /> : <Redirect to={{ pathname: "/" }} />;

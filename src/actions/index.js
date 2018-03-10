@@ -1,6 +1,6 @@
 import Firebase from "firebase";
 
-let firebaseRef = new Firebase("https://brownbag-hsg.firebaseio.com/");
+const firebaseRef = new Firebase("https://brownbag-hsg.firebaseio.com/");
 
 export const SEND_MESSAGE = "SEND_MESSAGE";
 export const SIGN_IN_USER = "SIGN_IN_USER";
@@ -23,7 +23,7 @@ export function sendMessage(text) {
 
 export function signInUser(name) {
     return dispatch => {
-        let newUserRef = firebaseRef.child("users").push();
+        const newUserRef = firebaseRef.child("users").push();
         newUserRef.set({ name }).then(() => {
             dispatch({
                 type: SIGN_IN_USER,
@@ -36,7 +36,7 @@ export function signInUser(name) {
 
 export function startListeningForUsers() {
     return dispatch => {
-        let usersRef = firebaseRef.child("users");
+        const usersRef = firebaseRef.child("users");
         usersRef.on("child_added", snapshot => {
             dispatch({
                 type: RECEIVED_USER,

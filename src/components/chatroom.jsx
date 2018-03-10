@@ -40,7 +40,7 @@ const ColumnTwo = styled.div`
     height: 100%;
 `;
 
-let ChatRoom = () => {
+const ChatRoom = () => {
     return (
         <Container className="container-fluid">
             <Row className="row">

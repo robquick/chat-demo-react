@@ -6,6 +6,6 @@ const mapStateToProps = state => {
     return { currentUser: state.currentUser, foo: 1 };
 };
 
-let AppContainer = withRouter(connect(mapStateToProps)(App));
+const AppContainer = withRouter(connect(mapStateToProps)(App));
 
 export default AppContainer;

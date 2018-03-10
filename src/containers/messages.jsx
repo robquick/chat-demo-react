@@ -8,6 +8,6 @@ const mapStateToProps = state => {
     };
 };
 
-let Messages = withRouter(connect(mapStateToProps)(MessageList));
+const Messages = withRouter(connect(mapStateToProps)(MessageList));
 
 export default Messages;

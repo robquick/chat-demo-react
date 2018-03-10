@@ -8,6 +8,6 @@ const mapStateToProps = state => {
     };
 };
 
-let Users = withRouter(connect(mapStateToProps)(UserList));
+const Users = withRouter(connect(mapStateToProps)(UserList));
 
 export default Users;

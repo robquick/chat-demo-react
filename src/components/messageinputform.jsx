@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-let MessageInput = props => {
+const MessageInput = props => {
     let elem,
         handleSubmit = e => {
             e.preventDefault();

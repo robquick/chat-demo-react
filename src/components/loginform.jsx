@@ -14,7 +14,7 @@ const Button = styled.button`
     margin-left: 5px;
 `;
 
-let LoginForm = props => {
+const LoginForm = props => {
     let elem,
         focus = () => {
             if (elem) {

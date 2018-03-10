@@ -11,6 +11,6 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-let Login = withRouter(connect(null, mapDispatchToProps)(LoginForm));
+const Login = withRouter(connect(null, mapDispatchToProps)(LoginForm));
 
 export default Login;

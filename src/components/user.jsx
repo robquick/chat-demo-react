@@ -9,7 +9,7 @@ const UserDiv = styled.div`
     font-size: x-large;
 `;
 
-let User = props => {
+const User = props => {
     const userName = props.user.get("name");
     return <UserDiv title={userName}>{userName}</UserDiv>;
 };

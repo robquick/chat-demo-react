@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-let MessageInput = withRouter(
+const MessageInput = withRouter(
     connect(null, mapDispatchToProps)(MessageInputForm)
 );
 

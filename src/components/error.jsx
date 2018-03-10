@@ -7,7 +7,7 @@ const Container = styled.div`
     padding-top: 10px !important;
 `;
 
-let Error = () => {
+const Error = () => {
     return (
         <Container className="container-fluid">
             <div className="jumbotron">
