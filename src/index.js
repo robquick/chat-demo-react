@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import * as actions from "./actions";
 import AppContainer from "./containers/appcontainer";
-import boostrapCSS from "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 const reactElem = (
     <BrowserRouter>
