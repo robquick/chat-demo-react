@@ -5,33 +5,40 @@ import Messages from "../containers/messages.jsx";
 import MessageInput from "../containers/messageinput.jsx";
 
 // Absolutely positioned wrapper elements
-const AbsoluteDiv = styled.div`
+const Container = styled.div`
     position: absolute;
-    top: 0;
+    top: 56px;
     left: 0;
     right: 0;
     bottom: 0;
 `;
-const Container = AbsoluteDiv.extend`
-    top: 56px;
-`;
-const MessagesWrapper = AbsoluteDiv.extend`
+const MessagesWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 34px;
 `;
-const InputWrapper = AbsoluteDiv.extend`
+const InputWrapper = styled.div`
+    position: absolute;
     top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
 `;
 
 // Rows and columns
-const OneHundredPercentHeightDiv = styled.div`
+const Row = styled.div`
     height: 100%;
 `;
-const Row = OneHundredPercentHeightDiv.extend``;
-const ColumnOne = OneHundredPercentHeightDiv.extend`
+const ColumnOne = styled.div`
+    height: 100%;
     border-right: 1px solid;
     border-color: #e7e7e7;
 `;
-const ColumnTwo = OneHundredPercentHeightDiv.extend``;
+const ColumnTwo = styled.div`
+    height: 100%;
+`;
 
 let ChatRoom = () => {
     return (
