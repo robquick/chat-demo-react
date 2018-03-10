@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import * as actions from "./actions";
 import AppContainer from "./containers/appcontainer";
+import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 
 const reactElem = (
@@ -15,7 +16,7 @@ const reactElem = (
     </BrowserRouter>
 );
 
-const domElem = document.getElementById("container");
+const domElem = document.getElementById("root");
 
 ReactDom.render(reactElem, domElem);
 
@@ -23,3 +24,5 @@ setTimeout(() => {
     store.dispatch(actions.startListeningForUsers());
     store.dispatch(actions.startListeningForMessages());
 });
+
+registerServiceWorker();
