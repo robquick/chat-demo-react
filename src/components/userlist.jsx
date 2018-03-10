@@ -1,6 +1,7 @@
 import React from "react";
 import  { List } from "immutable";
 import User from "./user.jsx";
+import PropTypes from 'prop-types';
 
 let UserList = (props) => {
     const userElems = props.users
@@ -12,7 +13,7 @@ let UserList = (props) => {
 }
 
 UserList.propTypes = {
-    users: React.PropTypes.instanceOf(List).isRequired
+    users: PropTypes.instanceOf(List).isRequired
 }
 
 export default UserList;

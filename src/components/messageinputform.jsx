@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 let MessageInput = (props) => {
     let elem,
@@ -19,7 +20,7 @@ let MessageInput = (props) => {
 };
 
 MessageInput.propTypes = {
-    onSubmit: React.PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired
 }
 
 export default MessageInput;

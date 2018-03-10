@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 let LoginForm = (props) => {
     let elem,
@@ -27,7 +28,7 @@ let LoginForm = (props) => {
 };
 
 LoginForm.propTypes = {
-    onSubmit: React.PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired
 }
 
 export default LoginForm;

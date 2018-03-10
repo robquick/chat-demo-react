@@ -1,7 +1,12 @@
 import React from "react";
 import { Map } from "immutable";
+import PropTypes from 'prop-types';
 
-const styles = { overflow: "hidden", textOverflow: "ellipsis", fontSize: "x-large" };
+const styles = { 
+    overflow: "hidden", 
+    textOverflow: "ellipsis", 
+    fontSize: "x-large" 
+};
 
 let User = (props) => {
     const userName = props.user.get("name");
@@ -11,7 +16,7 @@ let User = (props) => {
 }
 
 User.propTypes = {
-    user: React.PropTypes.instanceOf(Map).isRequired
+    user: PropTypes.instanceOf(Map).isRequired
 }
 
 export default User;

@@ -1,6 +1,7 @@
 import React from "react";
 import Message from "./message.jsx";
 import { List } from "immutable";
+import PropTypes from 'prop-types';
 
 class MessageList extends React.Component {
     
@@ -31,7 +32,7 @@ class MessageList extends React.Component {
 }
 
 MessageList.propTypes = {
-    messages: React.PropTypes.instanceOf(List).isRequired
+    messages: PropTypes.instanceOf(List).isRequired
 };
 
 export default MessageList;
