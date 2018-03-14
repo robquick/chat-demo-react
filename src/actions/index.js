@@ -17,7 +17,6 @@ export const SEND_MESSAGE = "SEND_MESSAGE";
 export const SIGN_IN_USER = "SIGN_IN_USER";
 export const RECEIVED_USER = "RECEIVED_USER";
 export const REMOVE_USER = "REMOVE_USER";
-export const INITIALIZE_USERS = "INITIALIZE_USERS";
 export const RECEIVED_MESSAGE = "RECEIVED_MESSAGE";
 
 export function sendMessage(text) {
